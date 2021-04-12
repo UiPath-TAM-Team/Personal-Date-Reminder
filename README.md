@@ -1,8 +1,12 @@
-# Personal-Date-Reminder 📅
+# Personal Date Reminder 📅
 
 Remind yourself via pop-up message box of personal events specified in your own Excel spreadsheet.
 
 <img src="/Data/Personal-Date-Reminder.gif" alt="GIF of Personal-Date-Reminder running." width="100%" />
+
+## Disclaimer
+
+**The contents of this repository are NOT OFFICIALLY SUPPORTED by UiPath. Anything you use is AT YOUR OWN DISCRETION.**
 
 ## Running the Automation
 
