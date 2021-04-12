@@ -10,15 +10,15 @@ Remind yourself via pop-up message box of personal events specified in your own 
 
 2. Update the per-Robot value for the Asset used by this automation to point to the full path where you stored your personal "dates.xlsx" file:
 
-  | **Asset Name**                       | **Asset Description**                         | **Asset Per-Robot Value (Example)**   |
-  |--------------------------------------|-----------------------------------------------|---------------------------------------|
-  | Personal-Date-Reminder_Workbook-Path | Full path to your personal "dates.xlsx" file. | "C:\Users\Michael\Desktop\dates.xlsx" |
+| **Asset Name**                       | **Asset Description**                         | **Asset Per-Robot Value (Example)**   |
+|--------------------------------------|-----------------------------------------------|---------------------------------------|
+| Personal-Date-Reminder_Workbook-Path | Full path to your personal "dates.xlsx" file. | "C:\Users\Michael\Desktop\dates.xlsx" |
 
 3. Update your personal "dates.xlsx" file to events that you would like to be notified about. The original template you downloaded comes with a sample event:
 
-  | **Name** | **Event**        | **Date**  | **Years** | **Is Today?** |
-  |----------|------------------|-----------|-----------|---------------|
-  | Michael  | Work Anniversary | 8/26/2019 | 1         | FALSE         |
+| **Name** | **Event**        | **Date**  | **Years** | **Is Today?** |
+|----------|------------------|-----------|-----------|---------------|
+| Michael  | Work Anniversary | 8/26/2019 | 1         | FALSE         |
 
     * Note that the automation relies on the original column names and logic from the template you downloaded. You can delete the sample events and add your own events, in which the logic has been pre-filled for 100 rows. You can expand or condense to as many or little rows as you would like to.
 
