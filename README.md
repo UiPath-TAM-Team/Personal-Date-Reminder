@@ -16,13 +16,13 @@ Remind yourself via pop-up message box of personal events specified in your own 
 
 3. Update your personal "dates.xlsx" file to events that you would like to be notified about. The original template you downloaded comes with a sample event:
 
-| **Name** | **Event**        | **Date**  | **Years** | **Is Today?** |
-|----------|------------------|-----------|-----------|---------------|
-| Michael  | Work Anniversary | 8/26/2019 | 1         | FALSE         |
-
     * Note that the automation relies on the original column names and logic from the template you downloaded. You can delete the sample events and add your own events, in which the logic has been pre-filled for 100 rows. You can expand or condense to as many or little rows as you would like to.
 
     * Note that Excel inherently does not work well with dates prior to the year 1900, but workarounds exist online if you would like to do some research and make changes to the logic.
+
+| **Name** | **Event**        | **Date**  | **Years** | **Is Today?** |
+|----------|------------------|-----------|-----------|---------------|
+| Michael  | Work Anniversary | 8/26/2019 | 1         | FALSE         |
 
 4. If the automation runs on a day where the “Is Today?” value is “FALSE” for all rows, the pop-up message box will state the following:
 
