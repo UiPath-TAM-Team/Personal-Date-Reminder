@@ -58,4 +58,4 @@ Remind yourself via pop-up message box of personal events specified in your own 
 
 ## Owner
 
-[Michael A.](https://linkedin.com/in/magarenzo)
+[Michael Agarenzo](https://linkedin.com/in/magarenzo), Technical Account Manager at UiPath
