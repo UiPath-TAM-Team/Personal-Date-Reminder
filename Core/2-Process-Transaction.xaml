@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1168,1269.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1244,1460</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,9 +65,11 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process_Transaction" sap:VirtualizedContainerService.HintSize="618.666666666667,1064.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Process_Transaction" sap:VirtualizedContainerService.HintSize="618.666666666667,1395.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="message">
         <Variable.Default>
@@ -80,19 +82,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[In_Dates]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576.666666666667,562.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:LogMessage DisplayName="Log Message Started 2-Process-Transaction" sap:VirtualizedContainerService.HintSize="576.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started 2-Process-Transaction workflow.&quot;]" />
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[In_Dates]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576.666666666667,593.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,410" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,440.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[row(&quot;Is Today?&quot;).Equals(True)]" DisplayName="Private: If - row(&quot;Is Today?&quot;).Equals(True)" sap:VirtualizedContainerService.HintSize="484,318" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[row(&quot;Is Today?&quot;).Equals(True)]" DisplayName="Private: If - row(&quot;Is Today?&quot;).Equals(True)" sap:VirtualizedContainerService.HintSize="484,348.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <ui:InvokeCode ContinueOnError="{x:Null}" Code="In_Out_Message += In_Row(&quot;Name&quot;).ToString + &quot; is celebrating their &quot; + In_Row(&quot;Event&quot;).ToString + &quot; of &quot; + In_Row(&quot;Years&quot;).ToString + &quot; year(s). &quot;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                   <ui:InvokeCode.Arguments>
@@ -106,7 +109,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <If Condition="[message.equals(&quot;&quot;)]" DisplayName="If - Out_Message.equals(&quot;&quot;)" sap:VirtualizedContainerService.HintSize="576.666666666667,216" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[message.equals(&quot;&quot;)]" DisplayName="If - Out_Message.equals(&quot;&quot;)" sap:VirtualizedContainerService.HintSize="576.666666666667,246.666666666667" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Assign DisplayName="Assign - message" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
@@ -123,5 +126,6 @@
         <InArgument x:TypeArguments="x:String" x:Key="In_Message">[message]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message Started 2-Process-Transaction" sap:VirtualizedContainerService.HintSize="576.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Completed 2-Process-Transaction workflow.&quot;]" />
   </Sequence>
 </Activity>
